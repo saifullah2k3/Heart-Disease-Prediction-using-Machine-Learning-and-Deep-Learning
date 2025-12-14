@@ -1,55 +1,33 @@
-# Heart Disease Prediction
+## Comprehensive Description
 
-This project analyzes a dataset of heart disease patient records to predict the presence of heart disease using Machine Learning and Deep Learning techniques.
+### **Project Title:** Heart Disease Prediction using Big Data, Machine Learning, and Deep Learning
 
-## Overview
+### **Objective**
+The primary goal of this project is to build and compare predictive models that can accurately determine the likelihood of a patient having heart disease. It leverages a dataset of health records to identify patterns and risk factors associated with cardiac conditions.
 
-The project explores the dataset, performs data preprocessing and feature engineering, and then trains multiple models to classify patients.
+### **Methodology**
 
-### Key Classifiers
-1. **Logistic Regression**: A traditional statistical machine learning model.
-2. **Multi-Layer Perceptron (MLP)**: A deep learning model built with TensorFlow/Keras.
+1.  **Data Exploration & Preprocessing**:
+    -   The project begins with an in-depth exploratory data analysis (EDA) of the `heart.csv` dataset.
+    -   Key steps include handling missing values, visualizing feature distributions, and understanding correlations between medical attributes (e.g., `CP`, `Thalach`, `Exang`) and the target variable.
+    -   Categorical variables are encoded, and numerical features are standardized to ensure optimal model performance.
 
-## Dataset
+2.  **Feature Engineering**:
+    -   Principal Component Analysis (PCA) is applied to reduce containment dimensions while retaining essential variance, optimizing the computational efficiency of the models.
 
-The dataset (`heart.csv`) contains the following features:
-- `age`: Age in years
-- `sex`: Sex (1 = male; 0 = female)
-- `cp`: Chest pain type
-- `trestbps`: Resting blood pressure (in mm Hg)
-- `chol`: Serum cholestoral in mg/dl
-- `fbs`: Fasting blood sugar > 120 mg/dl (1 = true; 0 = false)
-- `restecg`: Resting electrocardiographic results
-- `thalach`: Maximum heart rate achieved
-- `exang`: Exercise induced angina (1 = yes; 0 = no)
-- `oldpeak`: ST depression induced by exercise relative to rest
-- `slope`: The slope of the peak exercise ST segment
-- `ca`: Number of major vessels (0-3) colored by flourosopy
-- `thal`: 3 = normal; 6 = fixed defect; 7 = reversable defect
-- `target`: Diagnosis of heart disease (1 = presence; 0 = absence)
+3.  **Model Development**:
+    -   **Logistic Regression**: A robust baseline model is implemented to establish a performance benchmark. It provides interpretability regarding how each feature influences the prediction.
+    -   **Deep Learning (MLP)**: A Multi-Layer Perceptron model is constructed using TensorFlow/Keras. This neural network consists of multiple dense layers with ReLU activation and a Sigmoid output layer, designed to capture complex, non-linear relationships in the data.
 
-## Requirements
+4.  **Evaluation & Comparison**:
+    -   Both models are evaluated using a suite of metrics: Accuracy, Precision, Recall, F1-Score, and the Area Under the Receiver Operating Characteristic Curve (AUC-ROC).
+    -   Confusion matrices are generated to visualize true positives, false negatives, etc.
+    -   The project concludes with a comparative analysis, highlighting the strengths of the Deep Learning approach in achieving higher accuracy compared to traditional statistical methods for this specific domain.
 
-- Python 3.x
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-- tensorflow
+### ** Technologies Used**
+-   **Language**: Python
+-   **Libraries**: pandas, numpy, matplotlib, seaborn, scikit-learn, tensorflow/keras
+-   **Tools**: Jupyter Notebook
 
-## Usage
-
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Open the Jupyter Notebook:
-   ```bash
-   jupyter notebook Heart_Disease_Prediction.ipynb
-   ```
-3. Run all cells to see the analysis and model training results.
-
-## Results
-
-The project compares the performance of Logistic Regression and the MLP model using metrics such as Accuracy, Precision, Recall, F1-Score, and AUC-ROC.
+### **Outcome**
+The project demonstrates that advanced deep learning architectures can significantly enhance prediction accuracy for medical diagnostics, offering a reliable tool for assisting healthcare professionals.
